@@ -172,7 +172,7 @@ To test various end-points and methods:
 
 ---
 
-## Perfomance
+## Performance
 
 The server performance test was done with **oha** It is a tool for stressing web server by generating HTTP Request load. Follow their [installation guide](https://github.com/hatoo/oha) to install it. Once you are done installing you can run in a new terminal:
 
