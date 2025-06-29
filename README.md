@@ -5,6 +5,8 @@ This project is a lightweight **custom HTTP server** built from scratch in **Go 
 > No external frameworks or libraries for HTTP handling were used.  
 > Built using `net`, `os`, and core Go packages only.
 
+![alt text](images/download.gif)
+
 ---
 
 ## 📚 Table of Contents
@@ -181,7 +183,6 @@ You would get some details on how to use it.
 To run performance test simulating 1000 request and 50 concurrent connection, provided your server is running run:
 
 - `oha -n 1000 -c 50 http://localhost:8080`
-
 
 ![alt text](images/image-1.png)
 
