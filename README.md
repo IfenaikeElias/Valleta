@@ -127,7 +127,7 @@ To test various end-points and methods:
         Send a message to be echoed back by the server:
             `curl http://localhost:8080/echo/hello, anyone home!!!`
 
--- **Root endpoint:**
+- **Root endpoint:**
     Acess the root of the server:
         `curl http://localhost:8080/`
 
@@ -150,7 +150,7 @@ To test various end-points and methods:
     To create a new file on the server:
         `curl -X POST http://localhost:8080/files/newfile.txt -d "New content on the server."`
 
--- **gzip Compression:**
+- **gzip Compression:**
     If the client supports gzip, you can request compressed responses by using the `--compressed` flag in `curl`:
         `curl -v -H "Accept-Encoding: gzip" http://localhost:8080/echo/abc` encoded output will be viewed as hexadecimal.
         `curl -v -H "Accept-Encoding: gzip" http://localhost:8080/echo/abc | hexdump -C` to view encoded output as bytes
