@@ -2,8 +2,8 @@ bin/
 *.exe
 *.log
 *.out
+.vscode
 go.mod
 go.sum
-Makefile
 newfile.txt
 
