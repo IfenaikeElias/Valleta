@@ -1,0 +1,9 @@
+bin/
+*.exe
+*.log
+*.out
+go.mod
+go.sum
+Makefile
+newfile.txt
+
