@@ -183,10 +183,10 @@ To run performance test simulating 1000 request and 50 concurrent connection, pr
 - `oha -n 1000 -c 50 http://localhost:8080`
 
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 ## Learnings
-
+image/image-1.png
 Some important concepts I reinforcend and learnt while building this project include:
 - **HTTP Protocol Internals:**  
   Gained a low-level understanding of how HTTP works — including request structure, status codes, headers, persistent connections, and content negotiation.
