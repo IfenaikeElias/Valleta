@@ -165,7 +165,9 @@ To test various end-points and methods:
         `curl --http1.1 -v http://localhost:8080/user-agent -H "User-Agent: orange/mango-grape" --next http://localhost:8080/echo/apple`
 
     How it works:
+
         - The server checks for the "Connection: keep-alive header.
+
         - If found, it keeps the connection open to process additional requests from the same client.
 
         - If not specified (or close is specified), the connection is closed after the first response.
