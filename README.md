@@ -160,7 +160,7 @@ To test various end-points and methods:
     Expected output:
         The server will respond with gzip compressed response body and appropraite response header contaning `Content-Encoding: gzip`
         
--- **Concurrent Persistent Connections:**
+- **Concurrent Persistent Connections:**
     The server supports HTTP/1.1 keep-alive connections by default. This allows the client to send multiple HTTP requests over the same TCP connection without reopening it:
         `curl --http1.1 -v http://localhost:4221/user-agent -H "User-Agent: orange/mango-grape" --next http://localhost:4221/echo/apple`
 
