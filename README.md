@@ -186,10 +186,12 @@ To run performance test simulating 1000 request and 50 concurrent connection, pr
 
 - `oha -n 1000 -c 50 http://localhost:8080`
 
-![alt text](images/image-1.png)
+![all text](images/to_post_on_linkedin.webm)
+
+![alt text](images/http_pic_for_linkedin_2.png)
 
 ## Learnings
-image/image-1.png
+
 Some important concepts I reinforcend and learnt while building this project include:
 - **HTTP Protocol Internals:**  
   Gained a low-level understanding of how HTTP works — including request structure, status codes, headers, persistent connections, and content negotiation.
@@ -213,7 +215,7 @@ Some important concepts I reinforcend and learnt while building this project inc
 
 ## Future Improvements and To-Do 
 
-- [ ] Figure why server success rate from stress testing drops from 100% to 85% and fix it.
+- [ ] Figure why server success rate from stress testing drops from 100% to 85% after adding gzip compression and fix it.
 - [ ] Add Support for PUT and DELETE methods
 - [ ] Add TLS/SSL support to enable secure communication over HTTPS.
 - [ ] Add loggin Mechanisms
