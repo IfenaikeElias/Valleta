@@ -1,16 +1,17 @@
 package main
 
 import (
-	"fmt"
 	"net"
 	"strings"
 	"time"
+    "strconv"
 )
 
 // write function to send response (generalize for different type of responses )
 // implement different route handlers
 
 // Processing response
+/*
 func buildResponseheader(contentType, contentEncoding, connectionType, body string) map[string]string {
 	header_map := make(map[string]string)
 
@@ -68,8 +69,8 @@ func (s *Server) SendResponse(statusCode string, conn net.Conn, body string, hea
 	}
 
 }
+*/
 
-/* Optimised versiong
 
 
 // write function to send response (generalize for different type of responses )
@@ -148,4 +149,3 @@ func (s *Server) SendResponse(statusCode string, conn net.Conn, body string, hea
         conn.Close()
     }
 }
-*/

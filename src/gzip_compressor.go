@@ -3,9 +3,10 @@ package main
 import (
 	"bytes"
 	"compress/gzip"
-	"fmt"
+    "sync"
+    "io"
 )
-
+/*
 func CompressResponsebody(responseBody string) string {
 	var buff bytes.Buffer
 	gw := gzip.NewWriter(&buff)
@@ -14,8 +15,7 @@ func CompressResponsebody(responseBody string) string {
 	compressed := buff.Bytes()
 	return fmt.Sprintf("%x", compressed)
 }
-
-/* Optimized Version
+*/
 
 var gzip_writer_pool = sync.Pool{
     New: func() interface{} {
@@ -40,5 +40,3 @@ func CompressResponsebody(responseBody string) string {
     return buff.String()
 }
 
-
-*/

@@ -5,8 +5,9 @@ import (
 	"net"
 	"os"
 	"strings"
+    "sync"
 )
-
+/*
 func (s *Server) route(conn net.Conn, req *HTTP_Request) {
 	// get handler for url_path
 	trimmed := strings.TrimPrefix(req.url_path, "/")
@@ -28,8 +29,7 @@ func (s *Server) route(conn net.Conn, req *HTTP_Request) {
 		s.SendResponse("404 Not Found", conn, string(errHtml), req.header_map["Connection"], "text/html", req.header_map["Accept-Encoding"])
 	}
 }
-
-/* Optimized verion
+*/
 
 func (s *Server) route(conn net.Conn, req *HTTP_Request) {
     // fast path: root
@@ -54,7 +54,7 @@ func (s *Server) route(conn net.Conn, req *HTTP_Request) {
         return
     }
 
-    // -------------- 404 fallback --------------------------------------
+    //  404 fallback 
     // Cache the not‑found page in memory so we don’t hit the filesystem
     // on every unknown route. A real server might embed the asset with
     // go:embed, but we’ll keep it simple with a package‑level var.
@@ -76,4 +76,3 @@ var (
     not_found_once sync.Once
 )
 
-*/

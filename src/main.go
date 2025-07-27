@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 	"net"
-	"os"
+	"strings"
 )
-
+/*
 const CRLF = "\r\n"
 const name = "myGoHTTP/1.0"
 
@@ -86,7 +86,7 @@ func main() {
 }
 
 
-/* Optimized versio
+*/
 
 
 var directoryFlag = flag.String("directory", "", "Path to file directory")
@@ -129,4 +129,3 @@ func main() {
     }
 }
 
-*/

@@ -1,6 +1,6 @@
 package main
 
-/*
+
 import (
 	"fmt"
 	"net"
@@ -37,4 +37,3 @@ func (s *Server) CloseConn() {
     }
 }
 
-*/

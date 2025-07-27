@@ -5,12 +5,14 @@ import (
 	"net"
 	"os"
 	"strings"
+    "path/filepath"
+    "mime"
 )
 
 
 
 // routing : given a URL path, figure out which function (handler) shoudl process it
-
+/*
 // this means any struct that implements Respond is a route and can be added to routes
 type Handler interface {
 	Respond(conn net.Conn, req *HTTP_Request, s *Server)
@@ -98,9 +100,8 @@ func (f fileHandler) Respond(conn net.Conn, req *HTTP_Request, s *Server) {
 		s.SendResponse("200 OK", conn, "created file successfully!", req.header_map["Connection"], "text/plain", "")
 	}
 }
+*/
 
-
-/* optimized version
 
 
 // any struct that implements Respond is a route
@@ -119,7 +120,6 @@ var routes = map[string]Handler{
     "/files": fileHandler{},
 }
 
-// -------------------- helper utilities ---------------------------------
 
 // compress_if_allowed returns a body string and the Content-Encoding value
 // to be reported back to the client. It calls your existing
@@ -138,7 +138,7 @@ func default_connection(req *HTTP_Request) string {
     return "close"
 }
 
-// -------------------- concrete handlers --------------------------------
+//  handlers 
 
 func (h rootHandler) Respond(conn net.Conn, req *HTTP_Request, s *Server) {
     body, encoding := compress_if_allowed(req, []byte("Hey This is root"))
@@ -183,7 +183,7 @@ func (f fileHandler) Respond(conn net.Conn, req *HTTP_Request, s *Server) {
             content_type = "application/octet-stream"
         }
 
-        // If the file already ends with .gz, serve it verbatim with
+        // If the file already ends with .gz, serve it with
         // Content-Encoding: gzip regardless of Accept-Encoding.
         if ext == ".gz" {
             s.SendResponse("200 OK", conn, string(data), default_connection(req), content_type, "gzip")
@@ -217,4 +217,3 @@ func (f fileHandler) Respond(conn net.Conn, req *HTTP_Request, s *Server) {
     }
 }
 
-*/
