@@ -6,16 +6,6 @@ import (
     "sync"
     "io"
 )
-/*
-func CompressResponsebody(responseBody string) string {
-	var buff bytes.Buffer
-	gw := gzip.NewWriter(&buff)
-	gw.Write([]byte(responseBody))
-	gw.Close()
-	compressed := buff.Bytes()
-	return fmt.Sprintf("%x", compressed)
-}
-*/
 
 var gzip_writer_pool = sync.Pool{
     New: func() interface{} {
@@ -24,8 +14,7 @@ var gzip_writer_pool = sync.Pool{
     },
 }
 
-// CompressResponsebody gzips the input string and returns the raw compressed
-// frame as a string. Callers should set the "Content-Encoding: gzip" header.
+// CompressResponsebody gzips the input string and returns the raw compressed frame as a string.
 func CompressResponsebody(responseBody string) string {
     var buff bytes.Buffer
 
