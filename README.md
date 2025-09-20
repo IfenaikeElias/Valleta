@@ -213,7 +213,6 @@ Some important concepts I reinforcend and learnt while building this project inc
 
 ## Future Improvements and To-Do 
 
-- [ ] Figure why server success rate from stress testing drops from 100% to 85% after adding gzip compression and fix it.
 - [ ] Add Support for PUT and DELETE methods
 - [ ] Add TLS/SSL support to enable secure communication over HTTPS.
 - [ ] Add loggin Mechanisms
