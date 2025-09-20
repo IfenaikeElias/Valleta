@@ -90,8 +90,8 @@ Follow the steps below to build and run the custom HTTP server on your local mac
 
 ### 1. Clone the Repository
 
-`git clone https://github.com/your-username/custom-http-server.git`
-`cd custom-http-server`
+`git clone https://github.com/your-username/Valleta.git`
+`cd Valleta`
 
 ### 2. Build Project
 
