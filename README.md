@@ -186,9 +186,7 @@ To run performance test simulating 1000 request and 50 concurrent connection, pr
 
 - `oha -n 1000 -c 50 http://localhost:8080`
 
-![all text](images/to_post_on_linkedin.webm)
-
-![alt text](images/http_pic_for_linkedin_2.png)
+![alt text](images/http_stress_test.png)
 
 ## Learnings
 
